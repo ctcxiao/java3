@@ -80,7 +80,7 @@ public class Add {
                 .collect(Collectors.toList());
 
         if (list.size() % 2 == 0) {
-            median = (list.get(list.size() / 2) + list.get(list.size() / 2 - 1)) / 2;
+            median = (list.get(list.size() / 2) + list.get(list.size() / 2 - 1)) / 2.0;
         } else {
             median = list.get(list.size() / 2);
         }
