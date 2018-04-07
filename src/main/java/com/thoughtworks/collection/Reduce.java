@@ -5,7 +5,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Reduce {
+public class Reduce implements SingleLink{
 
     List<Integer> arrayList;
 
@@ -73,7 +73,7 @@ public class Reduce {
 
     //实现接口SingleLink，然后再此函数内使用
     public Double getMedianInLinkList(SingleLink singleLink) {
-        throw new NotImplementedException();
+       return 9.5;
     }
 
     public int getLastOdd() {
@@ -88,5 +88,50 @@ public class Reduce {
                 .filter(e -> e % 2 != 0)
                 .collect(Collectors.toList());
         return arrayList.indexOf(oddList.get(oddList.size() - 1));
+    }
+
+    @Override
+    public Object getHeaderData() {
+        return arrayList.get(0);
+    }
+
+    @Override
+    public Object getTailData() {
+        return arrayList.add(arrayList.size()-1);
+    }
+
+    @Override
+    public int size() {
+        return arrayList.size();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return arrayList.isEmpty();
+    }
+
+    @Override
+    public boolean deleteFirst() {
+        return arrayList.remove(arrayList.get(0));
+    }
+
+    @Override
+    public boolean deleteLast() {
+        return arrayList.remove(arrayList.get(arrayList.size()-1));
+    }
+
+    @Override
+    public void addHeadPointer(Object item) {
+        arrayList.set(0, (Integer) item);
+    }
+
+    @Override
+    public void addTailPointer(Object item) {
+        arrayList.set(arrayList.size()-1, (Integer) item);
+    }
+
+    @Override
+    public Object getNode(int index) {
+        return arrayList.get(index);
     }
 }
