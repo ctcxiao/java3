@@ -11,7 +11,7 @@ public class CollectionOperatorTest {
 
     @Test
     public void should_return_list_by_Interval() {
-        //选出给定区间中所有的数字
+
 
         int right = 5;
         int left = 1;
@@ -29,7 +29,7 @@ public class CollectionOperatorTest {
 
     @Test
     public void should_return_list_by__two_Intervals() {
-        //选出给定区间中所有的偶数
+
         int right = 10;
         int left = 1;
 
@@ -46,7 +46,7 @@ public class CollectionOperatorTest {
 
     @Test
     public void should_pop_even_elements() {
-    //选出给定区间中所有的偶数
+
         int[] array = new int[]{1, 2, 3, 4, 5};
 
         Integer[] result = new Integer[]{2, 4};
@@ -59,7 +59,7 @@ public class CollectionOperatorTest {
 
     @Test
     public void should_pop_last_element() {
-        //弹出集合最后一个元素
+
         int[] array = new int[]{1, 2, 3, 4, 5};
 
         CollectionOperator collectionOperator = new CollectionOperator();
@@ -69,7 +69,7 @@ public class CollectionOperatorTest {
 
     @Test
     public void should_pop_common_elements() {
-        //弹出两个集合的交集
+
         int[] firstArray = new int[]{1, 2, 4, 6, 10};
         int[] secondArray = new int[]{3, 2, 6, 10, 8};
 
@@ -82,7 +82,7 @@ public class CollectionOperatorTest {
 
     @Test
     public void should_add_uncommon_elements_to_first_array() {
-        // 将集合二中与集合一不同的元素加入集合一
+
         Integer[] firstArray = new Integer[]{1, 2, 4, 6, 10};
         Integer[] secondArray = new Integer[]{3, 2, 6, 10, 8};
 

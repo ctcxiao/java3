@@ -12,7 +12,6 @@ public class ReduceTest {
 
     @Test
     public void should_get_maximum_of_list() {
-        // 获取数组中的最大值
         Integer[] array = new Integer[]{1, 5, 7, 2, 8, 9, 3, 2};
         List<Integer> arrayList = Arrays.asList(array);
 
@@ -23,7 +22,6 @@ public class ReduceTest {
 
     @Test
     public void should_get_minimum_of_list() {
-        //获取数组中的最小值
         Integer[] array = new Integer[]{9, 4, 5, 10, 34, 2, 1, 10, 16};
         List<Integer> arrayList = Arrays.asList(array);
 
@@ -34,7 +32,6 @@ public class ReduceTest {
 
     @Test
     public void should_get_average_of_list() {
-        // 获取数组的平均值
         Integer[] array = new Integer[]{12, 34, 56, 78, 90, 21};
         List<Integer> arrayList = Arrays.asList(array);
 
@@ -45,7 +42,6 @@ public class ReduceTest {
 
     @Test
     public void should_get_element_in_middle_position_with_order_elements() {
-        // 获取数组中位数
         Integer[] array = new Integer[]{1, 1, 1, 2, 3};
         List<Integer> arrayList = Arrays.asList(array);
         Reduce reduce = new Reduce(arrayList);
@@ -62,7 +58,6 @@ public class ReduceTest {
 
     @Test
     public void should_get_element_in_middle_position_in_linkList() {
-    //获取单链表中的中位数
         Integer[] array = new Integer[]{1, 4, 6, 2, 3, 10, 9, 8, 11, 2, 19, 30};
         List<Integer> arrayList = Arrays.asList(array);
 
@@ -79,7 +74,6 @@ public class ReduceTest {
 
     @Test
     public void should_return_first_even_element() {
-        //获取数组中第一个偶数
         Integer[] array = new Integer[]{1, 11, 27, 20, 4, 9, 15};
         List<Integer> arrayList = Arrays.asList(array);
 
@@ -89,7 +83,6 @@ public class ReduceTest {
 
     @Test
     public void should_return_index_of_first_even_element() {
-        //获取数组中第一个偶数的下标
         Integer[] array = new Integer[]{1, 11, 27, 20, 4, 9, 15, 4, 1, 11};
         List<Integer> arrayList = Arrays.asList(array);
 
@@ -99,7 +92,6 @@ public class ReduceTest {
 
     @Test
     public void should_return_last_even_element() {
-        //获取数组中最后一个奇数
         Integer[] array = new Integer[]{1, 11, 27, 20, 4, 9, 15};
         List<Integer> arrayList = Arrays.asList(array);
 
@@ -109,7 +101,6 @@ public class ReduceTest {
 
     @Test
     public void should_return_index_of_last_even_element() {
-        //获取数组中最后一个奇数的下标
         Integer[] array = new Integer[]{1, 4, 27, 20, 4, 9, 15, 4, 1, 11};
         List<Integer> arrayList = Arrays.asList(array);
 
@@ -119,7 +110,6 @@ public class ReduceTest {
 
     @Test
     public void can_judge_whether_is_equal() {
-        //判断两个数组是否相等
         Integer[] array = new Integer[]{1, 4, 27, 20, 4, 9, 15, 4, 1, 11};
         List<Integer> arrayList = Arrays.asList(array);
 

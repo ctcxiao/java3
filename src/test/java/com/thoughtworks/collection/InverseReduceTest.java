@@ -12,7 +12,7 @@ public class InverseReduceTest {
 
     @Test
     public void should_be_divided_to_smaller_number() {
- 
+
         Random random = mock(Random.class);
         when(random.nextInt(3)).thenReturn(2);
 
