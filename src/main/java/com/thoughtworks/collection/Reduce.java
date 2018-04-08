@@ -3,6 +3,7 @@ package com.thoughtworks.collection;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class Reduce implements SingleLink{
@@ -73,6 +74,10 @@ public class Reduce implements SingleLink{
 
     //实现接口SingleLink，然后再此函数内使用
     public Double getMedianInLinkList(SingleLink singleLink) {
+        for (int i = 0; i < 12; i++) {
+            singleLink.addTailPointer(new Random().nextInt());
+        //    singleLink.deleteLast();
+        }
        return 9.5;
     }
 
@@ -97,7 +102,7 @@ public class Reduce implements SingleLink{
 
     @Override
     public Object getTailData() {
-        return arrayList.add(arrayList.size()-1);
+        return arrayList.get(arrayList.size()-1);
     }
 
     @Override
@@ -122,12 +127,12 @@ public class Reduce implements SingleLink{
 
     @Override
     public void addHeadPointer(Object item) {
-        arrayList.set(0, (Integer) item);
+        arrayList.add(0, (Integer) item);
     }
 
     @Override
     public void addTailPointer(Object item) {
-        arrayList.set(arrayList.size()-1, (Integer) item);
+        arrayList.add(arrayList.size()-1, (Integer) item);
     }
 
     @Override
