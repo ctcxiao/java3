@@ -1,10 +1,6 @@
 package com.thoughtworks.collection;
 
-import com.sun.xml.internal.bind.v2.util.CollisionCheckStack;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Filter {

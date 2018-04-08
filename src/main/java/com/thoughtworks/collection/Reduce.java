@@ -31,7 +31,7 @@ public class Reduce implements SingleLink{
     public double getAverage() {
         return arrayList.stream()
                 .mapToInt(Integer::intValue)
-                .sum() / arrayList.size();
+                .sum() / (arrayList.size()*1.0);
     }
 
     public double getOrderedMedian() {
@@ -72,7 +72,7 @@ public class Reduce implements SingleLink{
         return false;
     }
 
-    //实现接口SingleLink，然后再此函数内使用
+
     public Double getMedianInLinkList(SingleLink singleLink) {
         for (int i = 0; i < 12; i++) {
             singleLink.addTailPointer(new Random().nextInt());

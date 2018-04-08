@@ -6,8 +6,8 @@ public interface SingleLink<T> {
     public int size();
     public boolean isEmpty();
     public boolean deleteFirst();
-    public boolean deleteLast();                //删除尾部元素；
-    public void addHeadPointer(T item);    //添加头指针
-    public void addTailPointer(T item);         //添加尾指针
+    public boolean deleteLast();
+    public void addHeadPointer(T item);
+    public void addTailPointer(T item);
     public T getNode(int index);
 }
