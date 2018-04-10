@@ -1,7 +1,5 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -73,6 +71,7 @@ public class Reduce implements SingleLink{
     }
 
 
+    //todo add logic here
     public Double getMedianInLinkList(SingleLink singleLink) {
         for (int i = 0; i < 12; i++) {
             singleLink.addTailPointer(new Random().nextInt());

@@ -1,10 +1,8 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
-import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,22 +17,14 @@ public class Flaten {
     public List<Integer> transformToOneDimesional() {
         List<Integer> result = new ArrayList<>();
         Stream.of(array)
-                .forEach(e -> {
-                    result.addAll(Arrays.asList(e));
-                });
+                .forEach(e -> result.addAll(Arrays.asList(e)));
         return result;
     }
 
     public List<Integer> transformToUnrepeatedOneDimesional() {
-        List<Integer> result = new ArrayList<>();
-        Stream.of(array)
-                .forEach(e -> {
-                    for (int ele : e) {
-                        if (!result.contains(ele)) {
-                            result.add(ele);
-                        }
-                    }
-                });
-        return result;
+        //todo see more about stream
+        return transformToOneDimesional().stream()
+            .distinct()
+            .collect(Collectors.toList());
     }
 }
