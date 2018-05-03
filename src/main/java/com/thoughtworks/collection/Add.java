@@ -1,40 +1,38 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
-import java.util.*;
-import java.util.function.BinaryOperator;
-import java.util.function.Consumer;
-import java.util.function.ToIntFunction;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Add {
     public int getSumOfEvens(int leftBorder, int rightBorder) {
         int sum = 0;
+        //todo duplicated code
         if (leftBorder > rightBorder) {
             int tmp = leftBorder;
             leftBorder = rightBorder;
             rightBorder = tmp;
         }
 
-        if (leftBorder % 2 == 0) {
-            for (int i = leftBorder; i <= rightBorder; i += 2) {
-                if (i % 2 == 0) {
-                    sum += i;
-                }
-            }
-        } else {
-            for (int i = leftBorder + 1; i <= rightBorder; i += 2) {
-                if (i % 2 == 0) {
-                    sum += i;
-                }
+        int start = leftBorder;
+        if (leftBorder % 2 != 0) {
+            start = leftBorder + 1;
+        }
+
+        //todo can be replaced by java 8 lambda
+        for (int i = start; i <= rightBorder; i += 2) {
+            if (i % 2 == 0) {
+                sum += i;
             }
         }
+
         return sum;
     }
 
     public int getSumOfOdds(int leftBorder, int rightBorder) {
         int sum = 0;
+        //todo duplicated code
         if (leftBorder > rightBorder) {
             int tmp = leftBorder;
             leftBorder = rightBorder;

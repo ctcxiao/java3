@@ -1,12 +1,9 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class MyMap {
 
@@ -31,20 +28,23 @@ public class MyMap {
                 .collect(Collectors.toList());
     }
 
+    //todo abstract to method
     public List<String> mapLetters() {
         return array.stream()
-                .map(e -> {
-                    String result = "";
-                    if (e < 26) {
-                        result += letters[e - 1];
-                        return result;
-                    }
-                    int count = (e - 1) / 26;
-                    int position = (e - 1) % 26;
-                    result += letters[count - 1];
-                    result += letters[position];
-                    return result;
-                }).collect(Collectors.toList());
+                .map(this::getLetterMethod).collect(Collectors.toList());
+    }
+
+    private String getLetterMethod(Integer e) {
+        String result = "";
+        if (e < 26) {
+            result += letters[e - 1];
+            return result;
+        }
+        int count = (e - 1) / 26;
+        int position = (e - 1) % 26;
+        result += letters[count - 1];
+        result += letters[position];
+        return result;
     }
 
     public List<Integer> sortFromBig() {
